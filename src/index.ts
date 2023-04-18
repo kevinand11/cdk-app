@@ -20,6 +20,10 @@ export class CdkAppStack extends cdk.Stack {
         AVAILABILITY_ZONES: JSON.stringify(
           cdk.Stack.of(this).availabilityZones,
         )
+      },
+      bundling: {
+        minify: true,
+        externalModules: ['aws-sdk'],
       }
     })
 
