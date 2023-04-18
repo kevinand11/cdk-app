@@ -9,7 +9,7 @@ export class CdkAppStack extends cdk.Stack {
   constructor (scope: Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props)
 
-    const lambdaFunction = new NodejsFunction(this, 'new-lambda', {
+    const lambdaFunction = new NodejsFunction(this, 'NewLambdaFunction', {
       runtime: lambda.Runtime.NODEJS_18_X,
       memorySize: 1024,
       timeout: cdk.Duration.seconds(15),
